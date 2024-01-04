@@ -113,7 +113,7 @@ function App() {
           <p className='text-5xl bold mt-4 ' id='Projects'>Projects</p>
             <div className='flex flex-col gap-40 py-10 md:flex-wrap lg:flex-wrap items-center '>
               <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
-                <div className='p-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white text-center '>description</div>
+                <div className='p-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white text-center '>Description</div>
                 <p className='p-4 text-lg mb-6 '>
                 A web-based system for software license management. We identify two primary users:
                  Clients and Software providers. Clients are able to manage an account with relevant
@@ -134,7 +134,7 @@ function App() {
                 </div>
               </div>
             <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
-            <div className='p-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white text-center '>description</div>
+            <div className='p-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white text-center '>Description</div>
                 <p className='p-4 text-lg mb-6 '>
                 The HooBank website,
                  represents a conceptual financial platform designed
@@ -155,7 +155,7 @@ function App() {
               </div>
             </div>
             <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
-            <div className='p-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white text-center '>description</div>
+            <div className='p-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white text-center '>Description</div>
                 <p className='p-4 text-lg mb-6 '>
                 The Gericht Restaurant is a visually appealing and user-friendly website. Crafted without the need for a backend, the site employs a modern and 
                 responsive design, ensuring seamless navigation across various devices. Users can explore
