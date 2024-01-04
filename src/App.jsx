@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 // import Image from 'next/image'
 import { AiFillLinkedin} from "react-icons/ai";
 import { FaGithub } from 'react-icons/fa';
@@ -9,14 +9,15 @@ import consulting from "../public/consulting.png"
 import web1 from "../public/web1.png"
 import web2 from "../public/web2.png"
 import web3 from "../public/web3.png";
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaReact, FaJs, FaHtml5, FaCss3 } from 'react-icons/fa';
 import tailwind from "../public/Tailwind.png";
 import styles from "./styles.module.css";
+import classNames from 'classnames';
 
 function App() {
-  
+  const [isMd, setIsMd] = useState(window.innerWidth > 600);
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -30,8 +31,26 @@ function App() {
       });
   };
 
-  const isMd= window.innerWidth <600;
+  
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMd(window.innerWidth > 600);
+    };
+
+    // Attach the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Call it once to set the initial value
+    handleResize();
+
+    // Remove the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [])
+
+  const combinedStyles = classNames(styles.smoothScrolLink, ' w-full h-full ');
   return (
     <main className='bg-white px-10 md:px-20 lg:px-40'>
       <section className='min-h-screen' id='Home'>
@@ -40,8 +59,8 @@ function App() {
             <button className='w-20 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out  px-3 ' ><a href='#Home' className={styles.smoothScrolLink}>Home</a></button>
             <button className='w-20 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out px-3'><a href='#Skills' className={styles.smoothScrolLink}>Skills</a></button>
             <button className='w-20 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out px-3'><a href='#Projects' className={styles.smoothScrolLink}>Projects</a></button>
-            <button className='w-23 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out  px-3'><a href='#Contact' className={styles.smoothScrolLink}>Contact me</a></button>
-            <button className='w-23 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out  px-3'>
+            <button className='w-24 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out  '><a href='#Contact' className={combinedStyles}>Contact me</a></button>
+            <button className='w-19 px-2  h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out'>
               <a href='https://liveconcordia-my.sharepoint.com/:w:/g/personal/i_hemmat_live_concordia_ca/EQfHI5bqzxJBs3F_CjoQqdgBrNxyyHmHW5LVrIJD9rtyzA?e=ghNE55' target="_blank">Resume</a>
             </button>
           </div>
