@@ -138,7 +138,7 @@ function App() {
                   <div className='mx-3'><FaReact className='text-cyan-500	size-7 '></FaReact></div>
                   <div className='mx-3 '><FaHtml5 className='text-orange-500	size-7 '></FaHtml5></div>
                   <div className='mx-3'><FaCss3 className='text-blue-500	size-7 '></FaCss3></div>
-                  <div className='mx-3 '><img src={tailwind} className='size-7'></img></div>
+                  <div className='mx-3 '><img src={tailwind} className='size-7 max-w-lg'></img></div>
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@ function App() {
                   <div className='mx-3'><FaReact className='text-cyan-500	size-7 '></FaReact></div>
                   <div className='mx-3 '><FaHtml5 className='text-orange-500	size-7 '></FaHtml5></div>
                   <div className='mx-3'><FaCss3 className='text-blue-500	size-7 '></FaCss3></div>
-                  <div className='mx-3 '><img src={tailwind} className='size-7'></img></div>
+                  <div className='mx-3 '><img src={tailwind} className='size-7 max-w-lg'></img></div>
                 </div>
               </div>
             </div>
