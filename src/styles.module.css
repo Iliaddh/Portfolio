@@ -1,0 +1,11 @@
+html{
+  scroll-behavior: smooth;
+}
+
+
+.smooth-scroll-link {
+    transition: color 0.3s ease-in-out; /* Example transition effect on link color */
+    
+  }
+
+ 
