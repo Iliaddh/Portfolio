@@ -15,6 +15,7 @@ import { FaReact, FaJs, FaHtml5, FaCss3 } from 'react-icons/fa';
 import tailwind from "../public/Tailwind.png";
 import styles from "./styles.module.css";
 import classNames from 'classnames';
+import { FaCopyright } from 'react-icons/fa';
 
 function App() {
   const [isMd, setIsMd] = useState(window.innerWidth > 600);
@@ -52,6 +53,7 @@ function App() {
 
   const combinedStyles = classNames(styles.smoothScrolLink, ' w-full h-full ');
   return (
+    <>
     <main className='bg-white px-10 md:px-20 lg:px-40'>
       <section className='min-h-screen' id='Home'>
         <nav className='mt-4  flex justify-center'>
@@ -204,7 +206,16 @@ function App() {
         </form>
       </div>
 
+      
     </main>
+    <footer className='w-full flex justify-center'>
+    <div className='flex text-center bg-gradient-to-r from-cyan-300 to-teal-300 w-full  p-3 '>
+      <div className='  flex items-center justify-center'><FaCopyright className='text-slate-500 text-sm'></FaCopyright></div>
+      <div><p className='text-slate-500 px-2 text-sm'>2024 Iliad Portfolio. All Rights Reserved</p></div>
+    </div>
+    
+  </footer>
+  </>
   )
 }
 
