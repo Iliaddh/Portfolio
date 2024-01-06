@@ -63,7 +63,7 @@ function App() {
             <button className='w-20 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out px-3'><a href='#Projects' className={styles.smoothScrolLink}>Projects</a></button>
             <button className='w-24 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out  '><a href='#Contact' className={combinedStyles}>Contact me</a></button>
             <button className='w-19 px-2  h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out'>
-            <a href="https://drive.google.com/file/d/1YbL3keF6oX03IiGggS5SVBmWb2s3oeze/view?usp=drive_link" target="_blank"  >Resume</a>
+            <a href="https://docs.google.com/document/d/14SLZpMsPGHLm_4WM-qSEwfVrm7S6O-YH/edit?usp=sharing&ouid=111550373762672032981&rtpof=true&sd=true" target="_blank"  >Resume</a>
             </button>
           </div>
         </nav>
