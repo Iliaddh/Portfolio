@@ -9,6 +9,7 @@ import consulting from "../public/consulting.png"
 import web1 from "../public/web1.png"
 import web2 from "../public/web2.png"
 import web3 from "../public/web3.png";
+import web4 from "../public/web4.png";
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaReact, FaJs, FaHtml5, FaCss3 } from 'react-icons/fa';
@@ -90,8 +91,8 @@ function App() {
             <p className='py-2'>
               Creating elegant designs suited for your needs following your design theory.
             </p>
-            <h4 className='py-4 text-teal-600'>Design tools I use:</h4>
-            <div className='justify-center relative'>
+              <h4 className='py-4 text-teal-600'>Design tools I use:</h4>
+              <div className='justify-center relative'>
                 <div className='flex justify-center mt-5 rounded-md '><p className='max-w-sm text-gray-100 py-1 shadow-lg bg-opacity-50	w-3/5  bg-cyan-500 shadow-cyan-300/50 rounded-md '>Figma</p></div>
                 <div className='flex justify-center mt-5 rounded-md '><p className='max-w-sm text-gray-100 py-1 shadow-lg bg-opacity-50	w-3/5  bg-cyan-500 shadow-cyan-300/50 rounded-md '>Sanity</p></div>
                 <div className='flex justify-center mt-5 '><p className='max-w-sm text-gray-100 py-1 shadow-lg bg-opacity-50	w-3/5  bg-cyan-500 shadow-cyan-300/50 rounded-md '>Photoshop</p></div>
@@ -163,17 +164,44 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
-            <div className='py-2'>
+              <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>  
+                <div className='py-2'>
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white  text-center '>Description</button>  
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center '><a href='https://iliaddh.github.io/Gericht-Restaurant/' target="_blank">Website</a></button>  
-                </div>
+              </div>
                 <p className='p-4 text-lg mb-6 '>
                 The Gericht Restaurant is a visually appealing and user-friendly website. Crafted without the need for a backend, the site employs a modern and 
                 responsive design, ensuring seamless navigation across various devices. Users can explore
                  the restaurant's offerings, peruse the menu, and get a glimpse of the ambiance through vibrant images.
                 </p>
               <div className='flex justify-center'><img src={web3} className='rounded-xl object-cover ' /></div>
+              <div className='flex justify-center mt-20 rounded-md shadow-lg bg-opacity-50	 bg-cyan-500 shadow-cyan-300/50 '>
+                {
+                 isMd ? (<p className='text-white mt-1.5 text-lg'>Tools used:</p>): console.log("not md")
+                }
+                <div className='w-3/5  flex justify-center p-2 rounded-md'>
+                  <div className='mx-3 '><FaJs className='text-amber-300 size-7  '></FaJs></div>
+                  <div className='mx-3'><FaReact className='text-cyan-500	size-7 '></FaReact></div>
+                  <div className='mx-3 '><FaHtml5 className='text-orange-500	size-7 '></FaHtml5></div>
+                  <div className='mx-3'><FaCss3 className='text-blue-500	size-7 '></FaCss3></div>
+                  <div className='mx-3 '><img src={tailwind} className='size-7 max-w-lg'></img></div>
+                </div>
+              </div>
+              
+              
+            </div>
+             
+            
+          </div>
+          <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
+            <div className='py-2'>
+                  <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white  text-center '>Description</button>  
+                  <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center '><a href='https://shopsmartpickk.com ' target="_blank">Website</a></button>  
+                </div>
+                <p className='p-4 text-lg mb-6 '>
+                ShopSmartPickk is a responsive Ecommerce website with a nice UX design and functioanlity.
+                </p>
+              <img src={web4} className='rounded-xl object-cover ' />
               <div className='flex justify-center mt-20 rounded-md shadow-lg bg-opacity-50	 bg-cyan-500 shadow-cyan-300/50 '>
               {
                 isMd ? (<p className='text-white mt-1.5 text-lg'>Tools used:</p>): console.log("not md")
@@ -187,7 +215,8 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+          
+          
         </div>
       </section>
       <div className=' flex justify-center my-20  ' id='Contact'>
