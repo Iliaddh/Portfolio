@@ -190,10 +190,7 @@ function App() {
               
               
             </div>
-             
-            
-          </div>
-          <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
+            <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
             <div className='py-2'>
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white  text-center '>Description</button>  
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center '><a href='https://shopsmartpickk.com ' target="_blank">Website</a></button>  
@@ -214,7 +211,10 @@ function App() {
                   <div className='mx-3 '><img src={tailwind} className='size-7 max-w-lg'></img></div>
                 </div>
               </div>
-            </div>
+          </div>
+            
+          </div>
+          
           
           
         </div>
