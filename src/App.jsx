@@ -18,6 +18,7 @@ import tailwind from "../public/Tailwind.png";
 import styles from "./styles.module.css";
 import classNames from 'classnames';
 import { FaCopyright } from 'react-icons/fa';
+import BackToTopButton from './backToTop';
 
 function App() {
   const [isMd, setIsMd] = useState(window.innerWidth > 600);
@@ -54,9 +55,28 @@ function App() {
   }, [])
 
   const combinedStyles = classNames(styles.smoothScrolLink, ' w-full h-full ');
+
+  //Back to top button
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show the button when the user scrolls down, hide it otherwise
+      const isScrolledDown = window.scrollY > 100;
+      setShowButton(isScrolledDown);
+    };
+
+    // Add the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
-    <main className='bg-white px-10 md:px-20 lg:px-40'>
+    <main className='bg-white px-10 md:px-20 lg:px-40 relative'>
       <section className='min-h-screen' id='Home'>
         <nav className='mt-4  flex justify-center'>
           <div className='h-10 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full  flex justify-center max-w-lg '>
@@ -260,7 +280,9 @@ function App() {
       </div>
 
       
+      
     </main>
+    {showButton && <BackToTopButton />}
     <footer className='w-full flex justify-center'>
     <div className='flex text-center bg-gradient-to-r from-cyan-300 to-teal-300 w-full  p-3 '>
       <div className='  flex items-center justify-center'><FaCopyright className='text-slate-500 text-sm'></FaCopyright></div>
