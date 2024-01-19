@@ -85,7 +85,7 @@ function App() {
             <button className='w-20 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out px-3'><a href='#Projects' className={styles.smoothScrolLink}>Projects</a></button>
             <button className='w-24 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out  '><a href='#Contact' className={combinedStyles}>Contact me</a></button>
             <button className='w-19 px-2  h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out'>
-            <a href="https://drive.google.com/file/d/1QFu-OKlqHNZ1I4qlL2kpZwB8e54a4WVi/view?usp=sharing" target="_blank"  >Resume</a>
+            <a href="https://drive.google.com/file/d/1__vyRbVmz73R_XIWni4OJl1bR0Q-zljD/view?usp=drive_link" target="_blank"  >Resume</a>
             </button>
           </div>
         </nav>
@@ -128,6 +128,7 @@ function App() {
             <h4 className='py-4 text-teal-600'>Languages and Frameworks I use:</h4>
             <div className='flex justify-center mt-5 '><p className='max-w-sm py-1 text-gray-100  shadow-lg bg-opacity-50	w-3/5  bg-cyan-500 shadow-cyan-300/50 rounded-md'>JavaScript</p></div>
             <div className='flex justify-center mt-5'><p className='max-w-sm text-gray-100 py-1 shadow-lg bg-opacity-50	w-3/5  bg-cyan-500 shadow-cyan-300/50 rounded-md'>React.js</p></div>
+            <div className='flex justify-center mt-5'><p className='max-w-sm text-gray-100 py-1 shadow-lg bg-opacity-50	w-3/5  bg-cyan-500 shadow-cyan-300/50 rounded-md'>Next.js</p></div>
             <div className='flex justify-center mt-5 '><p className='max-w-sm text-gray-100 py-1 shadow-lg bg-opacity-50	w-3/5  bg-cyan-500 shadow-cyan-300/50 rounded-md'>Tailwind CSS</p></div>
             <div className='flex justify-center mt-5 '><p className='max-w-sm text-gray-100 py-1 shadow-lg bg-opacity-50	w-3/5  bg-cyan-500 shadow-cyan-300/50 rounded-md'>HTML</p></div>
             <div className='flex justify-center mt-5 '><p className='max-w-sm text-gray-100 py-1 shadow-lg bg-opacity-50	w-3/5  bg-cyan-500 shadow-cyan-300/50 rounded-md'>CSS</p></div>
@@ -275,7 +276,7 @@ function App() {
           <div className='mt-10 w-full relative'>
             <textarea name="message" className='w-full py-2.5 px-0 text-md my-2.5 mx-0 focus:border-b border-b border-black' placeholder='Your Message'></textarea>
           </div>
-          <input type="submit" value="Send" className='w-20 h-10 rounded-lg bg-gradient-to-r from-cyan-500 to-teal-500  text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer'/>
+          <div className='flex justify-center mt-2'><input type="submit" value="Send" className='w-20 h-10 rounded-lg bg-gradient-to-r from-cyan-500 to-teal-500  text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer'/></div>
         </form>
       </div>
 
