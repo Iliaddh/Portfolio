@@ -11,6 +11,7 @@ import web2 from "../public/web2.png"
 import web3 from "../public/web3.png";
 import web4 from "../public/web4.png";
 import web5 from "../public/web5.png";
+import web6 from "../public/web6.png";
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaReact, FaJs, FaHtml5, FaCss3 } from 'react-icons/fa';
@@ -19,6 +20,15 @@ import styles from "./styles.module.css";
 import classNames from 'classnames';
 import { FaCopyright } from 'react-icons/fa';
 import BackToTopButton from './backToTop';
+const DATA = [
+  {description: "A web-based system for software license management. We identify two primary users:Clients and Software providers. Clients are able to manage an account with relevantinformation, associate licenses to their account, aquire new licenses, etc. Software providers are able to manage client accounts, generate serial numbers, associate serialnumbers with products and clients, etc.", img:web1, nextjs:false, reactjs:false ,tailwindcss:"false", url:"https://markghaby.github.io/SOEN287_Project/"},
+  {description: "The HooBank website,represents a conceptual financial platform designedto assist users in exploring and selecting suitable payment methods.", img:web2, nextjs:false, reactjs:true, tailwindcss:true, url:"https://iliaddh.github.io/Modern-Bank/"},
+  {description: "ShopSmartPickk is a responsive Ecommerce website with a nice UX design and functioanality.", img:web4, nextjs:false, reactjs:true, tailwindcss:true, url:"https://shopsmartpickk.com"},
+  {description: "Book app is a responsive library website with a nice UX design and functionality.", img:web5, nextjs:false, reactjs:true, tailwindcss:false, url:"https://iliaddh.github.io/bookStore/"},
+  {description: "CryptoApp is a complete responsive react project interacting with real world API and data.", img:web6, nextjs:false, reactjs:true, tailwindcss:false, url:"https://iliaddh.github.io/CurrencyApp/"},
+]
+
+
 
 function App() {
   const [isMd, setIsMd] = useState(window.innerWidth > 600);
@@ -135,9 +145,49 @@ function App() {
             
             
           </div>
-          <p className='text-5xl bold mt-4 ' id='Projects'>Projects</p>
+          
+            <p className='text-5xl bold mt-4 ' id='Projects'>Projects</p>
             <div className='flex flex-col gap-40 py-10 md:flex-wrap lg:flex-wrap items-center '>
-              <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
+            {/* //test map */}
+            {
+              DATA.map((card) => (
+                <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
+                <div className='py-2'>
+                  <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white text-center '>Description</button>  
+                  <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center '><a href={card.url} target="_blank">Website</a></button>  
+                </div>
+                
+                <p className='p-4 text-lg mb-6 '>
+                  {card.description}
+                </p>
+                <img src={card.img} className='rounded-xl object-cover' />
+                <div className='flex justify-center mt-20 rounded-md shadow-lg bg-opacity-50	 bg-cyan-500 shadow-cyan-300/50 '>
+                  {
+                    isMd ? (<p className='text-white mt-1.5 text-lg'>Tools used:</p>): console.log("not md")
+                  }
+                  <div className='w-3/5  flex justify-center p-2 rounded-md'>
+                    <div className='mx-3 '><FaJs className='text-amber-300 size-7  '></FaJs></div>
+                    <div className='mx-3 '><FaHtml5 className='text-orange-500	size-7 '></FaHtml5></div>
+                    <div className='mx-3'><FaCss3 className='text-blue-500	size-7 '></FaCss3></div>
+                    {
+                      card.tailwindcss == true && (<div className='mx-3 '><img src={tailwind} className='size-7 max-w-lg'></img></div>) 
+                    }
+                    {
+                      card.reactjs == true && (<div className='mx-3'><FaReact className='text-cyan-500	size-7 '></FaReact></div>)
+                    }
+
+                    {
+                      card.nextjs == true && <span>Next.js</span> 
+                    }
+                  </div>
+                </div>
+              </div>
+              ))
+            }
+
+
+
+              {/* <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
                 <div className='py-2'>
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white text-center '>Description</button>  
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center '><a href='https://markghaby.github.io/SOEN287_Project/ ' target="_blank">Website</a></button>  
@@ -161,9 +211,11 @@ function App() {
                     <div className='mx-3'><FaCss3 className='text-blue-500	size-7 '></FaCss3></div>
                   </div>
                 </div>
-              </div>
-            <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
-            <div className='py-2'>
+              </div> */}
+
+              
+            {/* <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>
+                <div className='py-2'>
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white  text-center '>Description</button>  
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center '><a href='https://iliaddh.github.io/Modern-Bank/ ' target="_blank">Website</a></button>  
                 </div>
@@ -174,9 +226,9 @@ function App() {
                 </p>
               <img src={web2} className='rounded-xl object-cover ' />
               <div className='flex justify-center mt-20 rounded-md shadow-lg bg-opacity-50	 bg-cyan-500 shadow-cyan-300/50 '>
-              {
-                isMd ? (<p className='text-white mt-1.5 text-lg'>Tools used:</p>): console.log("not md")
-              }
+                {
+                  isMd ? (<p className='text-white mt-1.5 text-lg'>Tools used:</p>): console.log("not md")
+                }
                 <div className='w-3/5  flex justify-center p-2 rounded-md'>
                   <div className='mx-3 '><FaJs className='text-amber-300 size-7  '></FaJs></div>
                   <div className='mx-3'><FaReact className='text-cyan-500	size-7 '></FaReact></div>
@@ -186,7 +238,7 @@ function App() {
                 </div>
               </div>
             </div>
-              <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>  
+            <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg '>  
                 <div className='py-2'>
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white  text-center '>Description</button>  
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center '><a href='https://iliaddh.github.io/Gericht-Restaurant/' target="_blank">Website</a></button>  
@@ -218,7 +270,7 @@ function App() {
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center '><a href='https://shopsmartpickk.com ' target="_blank">Website</a></button>  
                 </div>
                 <p className='p-4 text-lg mb-6 '>
-                ShopSmartPickk is a responsive Ecommerce website with a nice UX design and functioanlity.
+                ShopSmartPickk is a responsive Ecommerce website with a nice UX design and functioanality.
                 </p>
               <img src={web4} className='rounded-xl object-cover ' />
               <div className='flex justify-center mt-20 rounded-md shadow-lg bg-opacity-50	 bg-cyan-500 shadow-cyan-300/50 '>
@@ -241,7 +293,7 @@ function App() {
                   <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400  text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center '><a href='https://iliaddh.github.io/bookStore/' target="_blank">Website</a></button>  
                 </div>
                 <p className='p-4 text-lg mb-6 '>
-                Book app is a responsive library website with a nice UX design and functioanlity.
+                Book app is a responsive library website with a nice UX design and functionality.
                 </p>
               <img src={web5} className='rounded-xl object-cover ' />
               <div className='flex justify-center mt-20 rounded-md shadow-lg bg-opacity-50	 bg-cyan-500 shadow-cyan-300/50 '>
@@ -256,7 +308,7 @@ function App() {
                   <div className='mx-3 '><img src={tailwind} className='size-7 max-w-lg'></img></div>
                 </div>
               </div>
-          </div>
+          </div> */}
             
           </div>
           
