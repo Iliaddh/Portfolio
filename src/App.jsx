@@ -16,59 +16,20 @@ import web5 from "../public/web5.png";
 import web6 from "../public/web6.png";
 import styles from "./styles.module.css";
 import classNames from 'classnames';
+import styled from "styled-components"
+import {DATA, designTools, languages} from "./../src/Data/data.js";
 
-const DATA = [
-  {
-    id: "1",
-    description: "A web-based system for software license management. We identify two primary users: Clients and Software providers. Clients are able to manage an account with relevant information, associate licenses to their account, acquire new licenses, etc. Software providers are able to manage client accounts, generate serial numbers, associate serial numbers with products and clients, etc.",
-    img: web1,
-    nextjs: false,
-    reactjs: false,
-    tailwindcss: false,
-    url: "https://markghaby.github.io/SOEN287_Project/"
-  },
-  {
-    id: "2",
-    description: "The HooBank website, represents a conceptual financial platform designed to assist users in exploring and selecting suitable payment methods.",
-    img: web2,
-    nextjs: false,
-    reactjs: true,
-    tailwindcss: true,
-    url: "https://iliaddh.github.io/Modern-Bank/"
-  },
-  {
-    id: "3",
-    description: "ShopSmartPickk is a responsive Ecommerce website with a nice UX design and functionality.",
-    img: web4,
-    nextjs: false,
-    reactjs: true,
-    tailwindcss: true,
-    url: "https://shopsmartpickk.com"
-  },
-  {
-    id: "4",
-    description: "Book app is a responsive library website with a nice UX design and functionality.",
-    img: web5,
-    nextjs: false,
-    reactjs: true,
-    tailwindcss: false,
-    url: "https://iliaddh.github.io/bookStore/"
-  },
-  {
-    id: "5",
-    description: "CryptoApp is a complete responsive react project interacting with real world API and data.",
-    img: web6,
-    nextjs: false,
-    reactjs: true,
-    tailwindcss: false,
-    url: "https://iliaddh.github.io/CurrencyApp/"
-  }
+const Paragraph = styled.p `
   
-];
+`
+
 
 const tailwindStyle1 = "w-20 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out  px-3";
 const tailwindStyle2 = "max-w-sm text-gray-100 py-1 shadow-lg bg-opacity-50	w-3/5  bg-cyan-500 shadow-cyan-300/50 rounded-md";
 const tailwindStyle3 = "w-full  py-2.5 px-0 text-md my-2.5 mx-0 focus:border-b border-b border-black";
+const STYLES = [tailwindStyle1, tailwindStyle2, tailwindStyle3];
+
+
 
 function App() {
   const form = useRef();
@@ -146,15 +107,16 @@ function App() {
               </p>
               <h4 className='py-4 text-teal-600'>Design tools I use:</h4>
               <div className='justify-center relative'>
-                <div className='flex justify-center mt-5 rounded-md '>
-                  <p className={tailwindStyle2}>Figma</p>
-                </div>
-                <div className='flex justify-center mt-5 rounded-md '>
-                  <p className={tailwindStyle2}>Sanity</p>
-                </div>
-                <div className='flex justify-center mt-5 '>
-                  <p className={tailwindStyle2}>Photoshop</p>
-                </div>
+                {
+                  designTools.map((tool) => (
+                    <>
+                      <div className='flex justify-center mt-5 rounded-md '>
+                        <Paragraph className={STYLES[1]} key= {tool.id}>{tool.name}</Paragraph>
+                      </div>
+                    </>
+                  ))
+                }
+
               </div>
             </div>
             <div className='text-center shadow-lg p-10 rounded-xl my-10'>
@@ -164,24 +126,15 @@ function App() {
                 Crafting Solutions with the Hottest Web Development Languages
               </p>
               <h4 className='py-4 text-teal-600'>Languages and Frameworks I use:</h4>
-              <div className='flex justify-center mt-5 '>
-                <p className={tailwindStyle2}>JavaScript</p>
-              </div>
-              <div className='flex justify-center mt-5'>
-                <p className={tailwindStyle2}>React.js</p>
-              </div>
-              <div className='flex justify-center mt-5'>
-                <p className={tailwindStyle2}>Next.js</p>
-              </div>
-              <div className='flex justify-center mt-5 '>
-                <p className={tailwindStyle2}>Tailwind CSS</p>
-              </div>
-              <div className='flex justify-center mt-5 '>
-                <p className={tailwindStyle2}>HTML</p>
-              </div>
-              <div className='flex justify-center mt-5 '>
-                <p className={tailwindStyle2}>CSS</p>
-              </div>
+              {
+                  languages.map((lang) => (
+                    <>
+                      <div className='flex justify-center mt-5'>
+                        <Paragraph className={STYLES[1]} key= {lang.id}>{lang.name}</Paragraph>
+                      </div>
+                    </>
+                  ))
+                }
             </div>
             <p className='text-5xl bold mt-4 ' id='Projects'>Projects</p>
             <div className='flex flex-col gap-40 py-10 md:flex-wrap lg:flex-wrap items-center '>
