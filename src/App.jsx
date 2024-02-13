@@ -8,20 +8,23 @@ import Projects from "./Projects.jsx";
 import deved from "../public/dev-ed-wave.png";
 import design from "../public/design.png";
 import code from "../public/code.png";
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
 import styles from "./styles.module.css";
 import classNames from 'classnames';
 import styled from "styled-components"
-import {DATA, designTools, languages} from "./../src/Data/data.js";
+import {DATA, designTools, languages, layoutData} from "./../src/Data/data.js";
 
 const Paragraph = styled.p `
   
 `
+
+const Anchor = styled.a `
+  
+`
+
+const Button = styled.button `
+  
+`
+
 
 
 const tailwindStyle1 = "w-20 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out  px-3";
@@ -67,26 +70,20 @@ function App() {
         <section className='min-h-screen' id='Home'>
           <nav className='mt-4  flex justify-center'>
             <div className='h-10 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full  flex justify-center max-w-lg '>
-              <button className={tailwindStyle1}>
-                <a href='#Home' className={styles.smoothScrolLink}>Home</a>
-              </button>
-              <button className={tailwindStyle1}>
-                <a href='#Skills' className={styles.smoothScrolLink}>Skills</a>
-              </button>
-              <button className={tailwindStyle1}>
-                <a href='#Projects' className={styles.smoothScrolLink}>Projects</a>
-              </button>
-              <button className='w-24 h-10 text-white center cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out'>
-                <a href='#Contact' className={combinedStyles}>Contact me</a>
-              </button>
-              <button className={tailwindStyle1}>
-                <a href="https://drive.google.com/file/d/1__vyRbVmz73R_XIWni4OJl1bR0Q-zljD/view?usp=drive_link" target="_blank">Resume</a>
-              </button>
+              {
+                layoutData.map(element => (
+                  <>
+                    <Button className={tailwindStyle1} key={element.id}>
+                      <Anchor href={element.href} className={styles.smoothScrolLink}>{element.innerText}</Anchor>
+                    </Button>
+                  </>
+                ))
+              }
             </div>
           </nav>
           <div className='text-center p-10'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Iliad Hemmatjoo</h2>
-            <h3 className='text-2xl py-2 md:text-3xl'>Web Developer and Designer</h3>
+            <h3 className='text-2xl py-2 md:text-3xl'>Front-end web developer</h3>
             <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto'>An enthusiast in web development field, and a Computer Science student from Montreal</p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>

@@ -97,3 +97,33 @@ export const DATA = [
       name: "CSS",
     },
   ]
+
+
+  export const layoutData = [
+    {
+        id: 1,
+        href: "#Home",
+        innerText: "Home",
+    },
+    {
+        id: 2,
+        href: "#Skills",
+        innerText: "Skills",
+    },
+    {
+        id: 3,
+        href: "#Projects",
+        innerText: "Projects",
+    },
+    {
+        id: 4,
+        href: "#Contact",
+        innerText: "Contact",
+    },
+    {
+        id: 5,
+        href: "https://drive.google.com/file/d/1__vyRbVmz73R_XIWni4OJl1bR0Q-zljD/view?usp=drive_link",
+        innerText: "Resume",
+    },
+
+  ]
