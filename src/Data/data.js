@@ -5,6 +5,7 @@ import web3 from "../../public/web3.png";
 import web4 from "../../public/web4.png";
 import web5 from "../../public/web5.png";
 import web6 from "../../public/web6.png";
+import web7 from "../../public/web7.png";
 
 export const DATA = [
     {
@@ -51,6 +52,15 @@ export const DATA = [
       reactjs: true,
       tailwindcss: false,
       url: "https://iliaddh.github.io/CurrencyApp/"
+    },
+    {
+      id: "6",
+      description: "The CarShop project, built with Next.js, revolutionizes the online car-buying experience with its sleek design and robust functionality. Users can effortlessly browse through vehicles, enjoying immersive visuals and detailed specifications. Powered by Next.js' dynamic routing, the platform offers advanced search filters, personalized recommendations, and interactive features for an engaging shopping journey. With its minimalist yet captivating interface, CarShop sets a new standard for elegance and efficiency in automotive e-commerce.",
+      img: web7,
+      nextjs: true,
+      reactjs: true,
+      tailwindcss: false,
+      url: "https://iliaddh.github.io/CarShop/"
     }
     
   ];

@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { FaReact, FaJs, FaHtml5, FaCss3 } from 'react-icons/fa';
-import tailwind from "../public/Tailwind.png";
-
+// import { FaReact, FaJs, FaHtml5, FaCss3 } from 'react-icons/fa';
+// import tailwind from "../public/Tailwind.png";
+import htmlIcon from "../public/icons8-html.svg"
+import cssIcon from "../public/icons8-css.svg"
+import javascriptsIcon from "../public/icons8-javascript.svg"
+import tailwindIcon from "../public/icons8-tailwind-css.svg"
+import reactIcon from "../public/icons8-react.svg";
+import nextjsIcon from "../public/icons8-nextjs.svg"
 function Projects({ card }) {
   const [isMd, setIsMd] = useState(window.innerWidth > 600);
 
@@ -36,16 +41,15 @@ function Projects({ card }) {
       <img src={card.img} className='rounded-xl object-cover' />
 
       <div className='flex justify-center mt-20 rounded-md shadow-lg bg-opacity-50 bg-cyan-500 shadow-cyan-300/50'>
-        {isMd && <p className='text-white mt-1.5 text-lg'>Tools used:</p>}
+        {isMd && <p className='text-white mt-3 text-lg'>Tools used:</p>}
 
         <div className='w-3/5 flex justify-center p-2 rounded-md'>
-          <div className='mx-3'><FaJs className='text-amber-300 size-7'></FaJs></div>
-          <div className='mx-3'><FaHtml5 className='text-orange-500 size-7'></FaHtml5></div>
-          <div className='mx-3'><FaCss3 className='text-blue-500 size-7'></FaCss3></div>
-
-          {card.tailwindcss && <div className='mx-3'><img src={tailwind} className='size-7 max-w-lg'></img></div>}
-          {card.reactjs && <div className='mx-3'><FaReact className='text-cyan-500 size-7'></FaReact></div>}
-          {card.nextjs && <span>Next.js</span>}
+          <img src={javascriptsIcon} className='text-blue-500 size-9 ml-3'></img>
+          <img src={htmlIcon} className='text-blue-500 size-9 ml-3'></img>
+          <img src={cssIcon} className='text-blue-500 size-9 ml-3'></img>
+          {card.tailwindcss && <img src={tailwindIcon} className='text-blue-500 size-9 ml-3'></img>}
+          {card.reactjs && <img src={reactIcon} className='text-blue-500 size-9 ml-3 '></img>}
+          {card.nextjs && <img src={nextjsIcon} className='text-blue-500 size-9 ml-3 '></img>}
         </div>
       </div>
     </div>
