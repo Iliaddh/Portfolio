@@ -10,58 +10,60 @@ import web7 from "../../public/web7.png";
 export const DATA = [
     {
       id: "1",
+      projectName:"Software License Management System",
       description: "A web-based system for software license management. We identify two primary users: Clients and Software providers. Clients are able to manage an account with relevant information, associate licenses to their account, acquire new licenses, etc. Software providers are able to manage client accounts, generate serial numbers, associate serial numbers with products and clients, etc.",
       img: web1,
       nextjs: false,
       reactjs: false,
       tailwindcss: false,
-      url: "https://markghaby.github.io/SOEN287_Project/"
+      url: "https://markghaby.github.io/SOEN287_Project/",
+      gitHub:"https://github.com/Iliaddh/Software-Lisence-Management-Website",
     },
     {
       id: "2",
-      description: "The HooBank website, represents a conceptual financial platform designed to assist users in exploring and selecting suitable payment methods.",
-      img: web2,
-      nextjs: false,
-      reactjs: true,
-      tailwindcss: true,
-      url: "https://iliaddh.github.io/Modern-Bank/"
-    },
-    {
-      id: "3",
+      projectName:"ShopSmartPick",
       description: "ShopSmartPickk is a responsive Ecommerce website with a nice UX design and functionality.",
       img: web4,
       nextjs: false,
       reactjs: true,
       tailwindcss: true,
-      url: "https://shopsmartpickk.com"
+      url: "https://shopsmartpickk.com",
+      gitHub:"https://github.com/Iliaddh/ShopSmartPick",
     },
     {
-      id: "4",
+      id: "3",
+      projectName:"BookApp",
       description: "Book app is a responsive library website with a nice UX design and functionality.",
       img: web5,
       nextjs: false,
       reactjs: true,
       tailwindcss: false,
-      url: "https://iliaddh.github.io/bookStore/"
+      url: "https://iliaddh.github.io/bookStore/",
+      gitHub:"https://github.com/Iliaddh/bookStore",
     },
     {
-      id: "5",
+      id: "4",
+      projectName:"CryptoApp",
       description: "CryptoApp is a complete responsive react project interacting with real world API and data.",
       img: web6,
       nextjs: false,
       reactjs: true,
       tailwindcss: false,
-      url: "https://iliaddh.github.io/CurrencyApp/"
+      url: "https://iliaddh.github.io/CurrencyApp/",
+      gitHub:"https://github.com/Iliaddh/CurrencyApp",
     },
     {
-      id: "6",
+      id: "5",
+      projectName:"CarShop",
       description: "The CarShop project, built with Next.js, revolutionizes the online car-buying experience with its sleek design and robust functionality. Users can effortlessly browse through vehicles, enjoying immersive visuals and detailed specifications. Powered by Next.js' dynamic routing, the platform offers advanced search filters, personalized recommendations, and interactive features for an engaging shopping journey. With its minimalist yet captivating interface, CarShop sets a new standard for elegance and efficiency in automotive e-commerce.",
       img: web7,
       nextjs: true,
       reactjs: true,
       tailwindcss: false,
-      url: "https://iliaddh.github.io/CarShop/"
-    }
+      url: "https://iliaddh.github.io/CarShop/",
+      gitHub:"https://github.com/Iliaddh/CarShop",
+    },
+    
     
   ];
 
