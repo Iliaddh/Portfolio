@@ -134,7 +134,7 @@ export const DATA = [
     },
     {
         id: 5,
-        href: "https://drive.google.com/file/d/1__vyRbVmz73R_XIWni4OJl1bR0Q-zljD/view?usp=drive_link",
+        href: "https://drive.google.com/file/d/1q2DxExAx68-AJiYQlwOizxIHeF5jMeOl/view?usp=sharing",
         innerText: "Resume",
     },
 
