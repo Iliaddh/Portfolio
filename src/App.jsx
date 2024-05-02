@@ -96,14 +96,14 @@ function App() {
         </section>
         <section>
           <div className='gap-10' id='Skills'>
-            <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+            <div className='text-center shadow-lg p-10 rounded-xl my-10' data-aos="zoom-in">
               <img src={design} width={100} height={100}/>
               <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
               <p className='py-2'>
                 Creating elegant designs suited for your needs following your design theory.
               </p>
               <h4 className='py-4 text-teal-600'>Design tools I use:</h4>
-              <div className='justify-center relative'>
+              <div className='justify-center relative' >
                 {
                   designTools.map((tool) => (
                     <>
@@ -116,7 +116,7 @@ function App() {
 
               </div>
             </div>
-            <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+            <div className='text-center shadow-lg p-10 rounded-xl my-10' data-aos="zoom-in">
               <img src={code} width={100} height={100}/>
               <h3 className='text-lg font-medium pt-8 pb-2'>On demand web development languages</h3>
               <p className='py-2'>
@@ -141,7 +141,7 @@ function App() {
             </div>
           </div>
         </section>
-        <div className=' flex justify-center my-20  ' id='Contact'>
+        <div className=' flex justify-center my-20  ' id='Contact' data-aos="zoom-out">
           <form className=' p-11  shadow-2xl rounded-2xl w-full lg:w-3/6 md:w-3/6' ref={form} onSubmit={sendEmail}>
             <h2 className='text-lg '>Send me a message</h2>
             <div className='mt-10 w-full relative'>
