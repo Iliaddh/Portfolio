@@ -26,6 +26,7 @@ function Projects({ card }) {
   return (
     <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg'>
       <div className='py-2'>
+        
         <div className='flex justify-center'><h1 className='text-2xl font-bold p-4 mb-6'>{card.projectName}</h1></div>
         <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400 text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center'>
           <a href={card.url} target="_blank">Website</a>
@@ -33,6 +34,9 @@ function Projects({ card }) {
         <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400 text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center'>
           <a href={card.gitHub} target="_blank">Repository</a>
         </button>
+        {card.underProduction && <button className='mx-2 w-36 h-10 rounded-lg bg-gradient-to-r from-red-600 to-red-700 text-white text-center'>
+          <a href={card.gitHub} target="_blank">Under Production</a>
+        </button>}
       </div>
 
       <p className='p-4 text-lg mb-6'>

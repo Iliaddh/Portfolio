@@ -6,6 +6,7 @@ import web4 from "../../public/web4.png";
 import web5 from "../../public/web5.png";
 import web6 from "../../public/web6.png";
 import web7 from "../../public/web7.png";
+import web8 from "../../public/web8.png";
 
 export const DATA = [
     {
@@ -60,8 +61,20 @@ export const DATA = [
       nextjs: true,
       reactjs: true,
       tailwindcss: false,
-      url: "https://iliaddh.github.io/CarShop/",
+      url: "https://car-shop-seven.vercel.app/",
       gitHub:"https://github.com/Iliaddh/CarShop",
+    },
+    {
+      id: "6",
+      projectName:"E-commerce Website",
+      description: "This e-commerce website is built with modern and on demand libraries and frameworks in the web development industry. Built with axios, querys, useContext, and APIs , this projects helped me improve my skills in building commercial websites, and gave me an overview of its development process.",
+      img: web8,
+      nextjs: false,
+      reactjs: true,
+      underProduction: true,
+      tailwindcss: false,
+      url: "https://shopping-cart-one-lake.vercel.app",
+      gitHub:"https://github.com/Iliaddh/Shopping-Cart",
     },
     
     
