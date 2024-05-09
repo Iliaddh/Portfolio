@@ -71,7 +71,7 @@ export const DATA = [
       img: web8,
       nextjs: false,
       reactjs: true,
-      underProduction: true,
+      underProduction: false,
       tailwindcss: false,
       url: "https://shopping-cart-one-lake.vercel.app",
       gitHub:"https://github.com/Iliaddh/Shopping-Cart",
