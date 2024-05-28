@@ -7,6 +7,7 @@ import web5 from "../../public/web5.png";
 import web6 from "../../public/web6.png";
 import web7 from "../../public/web7.png";
 import web8 from "../../public/web8.png";
+import web9 from "../../public/web9.png";
 
 export const DATA = [
     {
@@ -75,6 +76,18 @@ export const DATA = [
       tailwindcss: false,
       url: "https://shopping-cart-one-lake.vercel.app",
       gitHub:"https://github.com/Iliaddh/Shopping-Cart",
+    },
+    {
+      id: "7",
+      projectName:"Text to Image AI APP",
+      description: "In this projct I built a platform that create images from text using OpenAI's DALLE-E 3 . Users can Log in and sign up using mongoDB, and share the image they created to the community. I also used cloudinary to store images. This project also uses DaisyUI which provides beautiful tailwindcss components and enhances the user interface. This project is under production and I will be adding more features to it.",
+      img: web9,
+      nextjs: true,
+      reactjs: true,
+      underProduction: false,
+      tailwindcss: true,
+      url: "https://text-to-image-ai-next.vercel.app/",
+      gitHub:"https://github.com/Iliaddh/textToImageAINext",
     },
     
     
