@@ -21,7 +21,7 @@ export const DATA = [
     tailwindcss: true,
     underProduction: true,
     // url: "/",
-    gitHub:"/",
+    // gitHub:"/",
   },
   {
     id: "6",

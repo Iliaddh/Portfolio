@@ -38,14 +38,14 @@ function Projects({ card }) {
         <div className="flex justify-center">
           <h1 className="text-2xl font-bold p-4 mb-6">{card.projectName}</h1>
         </div>
-        {card.URL && (
+        {card.url && (
           <button className="mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400 text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center">
             <a href={card.url} target="_blank">
               Website
             </a>
           </button>
         )}
-        {card.URL && (
+        {card.gitHub && (
           <button className="mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400 text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center">
             <a href={card.gitHub} target="_blank">
               Repository
