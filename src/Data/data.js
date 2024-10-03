@@ -8,8 +8,33 @@ import web6 from "../../public/web6.png";
 import web7 from "../../public/web7.png";
 import web8 from "../../public/web8.png";
 import web9 from "../../public/web9.png";
+import web10 from "../../public/web10.png";
 
 export const DATA = [
+  {
+    id: "7",
+    projectName:"Highlight hub",
+    description: "Highlight Hub is a platform that allows athletes to share their highlight videos of their sport with coaches and recruiters. This freelance project built to a client with modern technologies like MS Azure Blob Storage, Next.js, MongoDB, Prisma, Next Auth and TailwindCSS. ",
+    img: web10,
+    nextjs: true,
+    reactjs: false,
+    tailwindcss: true,
+    underProduction: true,
+    // url: "/",
+    gitHub:"/",
+  },
+  {
+    id: "6",
+    projectName:"Text to Image AI APP",
+    description: "In this projct I built a platform that create images from text using OpenAI's DALLE-E 3 . Users can Log in and sign up using mongoDB, and share the image they created to the community. I also used cloudinary to store images. This project also uses DaisyUI which provides beautiful tailwindcss components and enhances the user interface. This project is under production and I will be adding more features to it.",
+    img: web9,
+    nextjs: true,
+    reactjs: true,
+    underProduction: false,
+    tailwindcss: true,
+    url: "https://text-to-image-ai-next.vercel.app/",
+    gitHub:"https://github.com/Iliaddh/textToImageAINext",
+},
     {
       id: "1",
       projectName:"Software License Management System",
@@ -20,20 +45,31 @@ export const DATA = [
       tailwindcss: false,
       url: "https://markghaby.github.io/SOEN287_Project/",
       gitHub:"https://github.com/Iliaddh/Software-Lisence-Management-Website",
-    },
+  },
+  {
+    id: "4",
+    projectName:"CarShop",
+    description: "The CarShop project, built with Next.js, revolutionizes the online car-buying experience with its sleek design and robust functionality. Users can effortlessly browse through vehicles, enjoying immersive visuals and detailed specifications. Powered by Next.js' dynamic routing, the platform offers advanced search filters, personalized recommendations, and interactive features for an engaging shopping journey. With its minimalist yet captivating interface, CarShop sets a new standard for elegance and efficiency in automotive e-commerce.",
+    img: web7,
+    nextjs: true,
+    reactjs: true,
+    tailwindcss: false,
+    url: "https://car-shop-seven.vercel.app/",
+    gitHub:"https://github.com/Iliaddh/CarShop",
+  },
+  {
+    id: "3",
+    projectName:"CryptoApp",
+    description: "CryptoApp is a complete responsive react project interacting with real world API and data.",
+    img: web6,
+    nextjs: false,
+    reactjs: true,
+    tailwindcss: false,
+    url: "https://iliaddh.github.io/CurrencyApp/",
+    gitHub:"https://github.com/Iliaddh/CurrencyApp",
+  },
     {
       id: "2",
-      projectName:"ShopSmartPick",
-      description: "ShopSmartPickk is a responsive Ecommerce website with a nice UX design and functionality.",
-      img: web4,
-      nextjs: false,
-      reactjs: true,
-      tailwindcss: true,
-      url: "https://shopsmartpickk.com",
-      gitHub:"https://github.com/Iliaddh/ShopSmartPick",
-    },
-    {
-      id: "3",
       projectName:"BookApp",
       description: "Book app is a responsive library website with a nice UX design and functionality.",
       img: web5,
@@ -43,30 +79,10 @@ export const DATA = [
       url: "https://iliaddh.github.io/bookStore/",
       gitHub:"https://github.com/Iliaddh/bookStore",
     },
-    {
-      id: "4",
-      projectName:"CryptoApp",
-      description: "CryptoApp is a complete responsive react project interacting with real world API and data.",
-      img: web6,
-      nextjs: false,
-      reactjs: true,
-      tailwindcss: false,
-      url: "https://iliaddh.github.io/CurrencyApp/",
-      gitHub:"https://github.com/Iliaddh/CurrencyApp",
-    },
+  
+   
     {
       id: "5",
-      projectName:"CarShop",
-      description: "The CarShop project, built with Next.js, revolutionizes the online car-buying experience with its sleek design and robust functionality. Users can effortlessly browse through vehicles, enjoying immersive visuals and detailed specifications. Powered by Next.js' dynamic routing, the platform offers advanced search filters, personalized recommendations, and interactive features for an engaging shopping journey. With its minimalist yet captivating interface, CarShop sets a new standard for elegance and efficiency in automotive e-commerce.",
-      img: web7,
-      nextjs: true,
-      reactjs: true,
-      tailwindcss: false,
-      url: "https://car-shop-seven.vercel.app/",
-      gitHub:"https://github.com/Iliaddh/CarShop",
-    },
-    {
-      id: "6",
       projectName:"E-commerce Website",
       description: "This e-commerce website is built with modern and on demand libraries and frameworks in the web development industry. Built with axios, querys, useContext, and APIs , this projects helped me improve my skills in building commercial websites, and gave me an overview of its development process.",
       img: web8,
@@ -77,18 +93,8 @@ export const DATA = [
       url: "https://shopping-cart-one-lake.vercel.app",
       gitHub:"https://github.com/Iliaddh/Shopping-Cart",
     },
-    {
-      id: "7",
-      projectName:"Text to Image AI APP",
-      description: "In this projct I built a platform that create images from text using OpenAI's DALLE-E 3 . Users can Log in and sign up using mongoDB, and share the image they created to the community. I also used cloudinary to store images. This project also uses DaisyUI which provides beautiful tailwindcss components and enhances the user interface. This project is under production and I will be adding more features to it.",
-      img: web9,
-      nextjs: true,
-      reactjs: true,
-      underProduction: false,
-      tailwindcss: true,
-      url: "https://text-to-image-ai-next.vercel.app/",
-      gitHub:"https://github.com/Iliaddh/textToImageAINext",
-    },
+    
+ 
     
     
   ];

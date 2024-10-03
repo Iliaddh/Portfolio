@@ -1,66 +1,89 @@
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import React, { useState, useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useState, useEffect } from "react";
 // import { FaReact, FaJs, FaHtml5, FaCss3 } from 'react-icons/fa';
 // import tailwind from "../public/Tailwind.png";
-import htmlIcon from "../public/icons8-html.svg"
-import cssIcon from "../public/icons8-css.svg"
-import javascriptsIcon from "../public/icons8-javascript.svg"
-import tailwindIcon from "../public/icons8-tailwind-css.svg"
+import htmlIcon from "../public/icons8-html.svg";
+import cssIcon from "../public/icons8-css.svg";
+import javascriptsIcon from "../public/icons8-javascript.svg";
+import tailwindIcon from "../public/icons8-tailwind-css.svg";
 import reactIcon from "../public/icons8-react.svg";
-import nextjsIcon from "../public/icons8-nextjs.svg"
+import nextjsIcon from "../public/icons8-nextjs.svg";
 function Projects({ card }) {
   const [isMd, setIsMd] = useState(window.innerWidth > 600);
 
   useEffect(() => {
-    AOS.init({duration:1000})
-  }, [])
+    AOS.init({ duration: 1000 });
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMd(window.innerWidth > 600);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize();
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <div className='justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg' data-aos="zoom-in">
-      <div className='py-2'  >
-        
-        <div className='flex justify-center'><h1 className='text-2xl font-bold p-4 mb-6'>{card.projectName}</h1></div>
-        <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400 text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center'>
-          <a href={card.url} target="_blank">Website</a>
-        </button>
-        <button className='mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400 text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center'>
-          <a href={card.gitHub} target="_blank">Repository</a>
-        </button>
-        {card.underProduction && <button className='mx-2 w-36 h-10 rounded-lg bg-gradient-to-r from-red-600 to-red-700 text-white text-center'>
-          <a href={card.gitHub} target="_blank">Under Production</a>
-        </button>}
+    <div
+      className="justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg"
+      data-aos="zoom-in"
+    >
+      <div className="py-2">
+        <div className="flex justify-center">
+          <h1 className="text-2xl font-bold p-4 mb-6">{card.projectName}</h1>
+        </div>
+        {card.URL && (
+          <button className="mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400 text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center">
+            <a href={card.url} target="_blank">
+              Website
+            </a>
+          </button>
+        )}
+        {card.URL && (
+          <button className="mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400 text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center">
+            <a href={card.gitHub} target="_blank">
+              Repository
+            </a>
+          </button>
+        )}
+        {card.underProduction && (
+          <div  className="mx-2 w-36 p-2 rounded-lg bg-gradient-to-r from-red-600 to-red-700 text-white text-center">
+            <p>
+              Under Production
+            </p>
+          </div>
+        )}
       </div>
 
-      <p className='p-4 text-lg mb-6'>
-        {card.description}
-      </p>
-      
-      <img src={card.img} className='rounded-xl object-cover' />
+      <p className="p-4 text-lg mb-6">{card.description}</p>
 
-      <div className='flex justify-center mt-20 rounded-md shadow-lg bg-opacity-50 bg-cyan-500 shadow-cyan-300/50'>
-        {isMd && <p className='text-white mt-3 text-lg'>Tools used:</p>}
+      <img src={card.img} className="rounded-xl object-cover" />
 
-        <div className='w-3/5 flex justify-center p-2 rounded-md'>
-          <img src={javascriptsIcon} className='text-blue-500 size-9 ml-3'></img>
-          <img src={htmlIcon} className='text-blue-500 size-9 ml-3'></img>
-          <img src={cssIcon} className='text-blue-500 size-9 ml-3'></img>
-          {card.tailwindcss && <img src={tailwindIcon} className='text-blue-500 size-9 ml-3'></img>}
-          {card.reactjs && <img src={reactIcon} className='text-blue-500 size-9 ml-3 '></img>}
-          {card.nextjs && <img src={nextjsIcon} className='text-blue-500 size-9 ml-3 '></img>}
+      <div className="flex justify-center mt-20 rounded-md shadow-lg bg-opacity-50 bg-cyan-500 shadow-cyan-300/50">
+        {isMd && <p className="text-white mt-3 text-lg">Tools used:</p>}
+
+        <div className="w-3/5 flex justify-center p-2 rounded-md">
+          <img
+            src={javascriptsIcon}
+            className="text-blue-500 size-9 ml-3"
+          ></img>
+          <img src={htmlIcon} className="text-blue-500 size-9 ml-3"></img>
+          <img src={cssIcon} className="text-blue-500 size-9 ml-3"></img>
+          {card.tailwindcss && (
+            <img src={tailwindIcon} className="text-blue-500 size-9 ml-3"></img>
+          )}
+          {card.reactjs && (
+            <img src={reactIcon} className="text-blue-500 size-9 ml-3 "></img>
+          )}
+          {card.nextjs && (
+            <img src={nextjsIcon} className="text-blue-500 size-9 ml-3 "></img>
+          )}
         </div>
       </div>
     </div>
