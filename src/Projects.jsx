@@ -38,6 +38,7 @@ function Projects({ card }) {
         <div className="flex justify-center">
           <h1 className="text-2xl font-bold p-4 mb-6">{card.projectName}</h1>
         </div>
+        <div className=" flex">
         {card.url && (
           <button className="mx-2 w-24 h-10 rounded-lg bg-gradient-to-r from-cyan-300 to-teal-400 text-white hover:transform hover:scale-110 transition-transform duration-300 ease-in-out center cursor-pointer text-center">
             <a href={card.url} target="_blank">
@@ -53,12 +54,13 @@ function Projects({ card }) {
           </button>
         )}
         {card.underProduction && (
-          <div  className="mx-2 w-36 p-2 rounded-lg bg-gradient-to-r from-red-600 to-red-700 text-white text-center">
+          <div  className="mx-2 w-36 p-2 rounded-lg bg-gradient-to-r  from-red-600 to-red-700 text-white text-center">
             <p>
               Under Production
             </p>
           </div>
         )}
+        </div>
       </div>
 
       <p className="p-4 text-lg mb-6">{card.description}</p>

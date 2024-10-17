@@ -20,7 +20,7 @@ export const DATA = [
     reactjs: false,
     tailwindcss: true,
     underProduction: true,
-    // url: "/",
+    url: "https://highlight-hub-zeta.vercel.app/",
     // gitHub:"/",
   },
   {
