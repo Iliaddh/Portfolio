@@ -66,7 +66,7 @@ function App() {
 
   return (
     <>
-      <main className='bg-white px-10 md:px-20 lg:px-40 relative'>
+      <main  className='bg-white px-10 md:px-20 lg:px-40 relative'>
         <section className='min-h-screen' id='Home'>
           <nav className='mt-4  flex justify-center'>
             <div className='h-10 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full  flex justify-center max-w-lg '>
