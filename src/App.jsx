@@ -67,7 +67,7 @@ function App() {
   return (
     <>
       <main  className='bg-white px-10 md:px-20 lg:px-40 relative'>
-        <section className='min-h-screen' id='Home'>
+        <section className='' id='Home'>
           <nav className='mt-4  flex justify-center'>
             <div className='h-10 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full  flex justify-center max-w-lg '>
               {
@@ -90,11 +90,11 @@ function App() {
             <a href='https://linkedin.com/in/hemmatjoo-me' target="_blank"><AiFillLinkedin className='cursor-pointer'/></a>
             <a href='https://github.com/iliaddh' target="_blank"><FaGithub className='cursor-pointer'/> </a>
           </div>
-          <div className='relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden md:h-96 md:w-96'>
+          {/* <div className='relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden md:h-96 md:w-96'>
             <img src={deved} layout='fill' objectFit='cover'/>
-          </div>
+          </div> */}
         </section>
-        <section>
+        <section className='mt-36'>
           <div className='gap-10' id='Skills'>
             <div className='text-center shadow-lg p-10 rounded-xl my-10' data-aos="zoom-in">
               <img src={design} width={100} height={100}/>
