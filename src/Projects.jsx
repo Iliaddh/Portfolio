@@ -33,6 +33,7 @@ function Projects({ card }) {
     <div
       className="justify-center max-w-2xl basis-1/3 flex-1 shadow-2xl p-8 rounded-lg"
       data-aos="zoom-in"
+      
     >
       <div className="py-2">
         <div className="flex justify-center">
